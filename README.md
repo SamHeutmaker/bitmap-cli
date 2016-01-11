@@ -14,3 +14,5 @@ example: node index.js tree.bmp sepia examples/sepia-tree
 List of bitmap transformations:
 grayscale
 sepia
+oldtime
+redscale
