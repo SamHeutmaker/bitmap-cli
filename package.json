@@ -1,0 +1,27 @@
+{
+  "name": "bitmap-transformer",
+  "version": "1.0.0",
+  "description": "Bitmap Transformer assignment for Code 401.",
+  "main": "bitmap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricecreamdude/bitmap-transformer.git"
+  },
+  "author": "Sam Heutmaker, Josh Ho, Jose Tello",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ricecreamdude/bitmap-transformer/issues"
+  },
+  "homepage": "https://github.com/ricecreamdude/bitmap-transformer#readme",
+  "keywords": [
+    "bitmap-transformer",
+    "codefellows"
+  ],
+  "dependencies": {
+    "bitmap-helpers": "^1.0.0",
+    "lodash": "^3.10.1"
+  }
+}
