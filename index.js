@@ -1,25 +1,29 @@
-const fs  = require('fs');
-const _   = require('lodash');
+const fs     = require('fs');
+const _      = require('lodash');
+const prompt = require('prompt');
 // Import bitmap manipuation module
 const bit = require('bitmap-helpers');
 
-// Get Bitmap parameter
-var orginalBitmap = fs.readFileSync(process.argv[2]);
-// Get Transformation to perform
-var transformation = process.argv[3];
-// Get Destination of transformed bitmap
-var destination = process.argv[4];
+(function() {
+  prompt.start();
+  prompt.get(['filename', 'transformation', 'file_destination'], function(err, result) {
+    console.log('File ' + result.filename + ' received.');
+    console.log('Transformation: ' + result.transformation + ' selected.');
+    console.log('File will be written at ' + result.file_destination + '.');
+    if (result.filename === undefined) return 'Please enter a valid filename';
 
-
-// Log bitmap meta data
-bit.readBitMapHeader(orginalBitmap);
-
-// New File
-var newFile = bit.createNewFile(orginalBitmap, transformation);
-// File Options
-var fileOptions = {
-  fileToCreate: destination + '.bmp'
-};
-
-// Write new file
-bit.writeFile(newFile, fileOptions);
+    var originalBitmap = fs.readFileSync(result.filename), // Bitmap parameter
+        transformation = result.transformation,            // Transformation to perform
+           destination = result.file_destination;          // Destination of transformed bitmap
+    // Log bitmap meta data
+    bit.readBitMapHeader(orginalBitmap);
+    // New File
+    var newFile = bit.createNewFile(originalBitmap, transformation);
+    // File Options
+    var fileOptions = {
+      fileToCreate: destination + '.bmp'
+    };
+    // Write new file
+    bit.writeFile(newFile, fileOptions);
+  })
+})();
