@@ -7,7 +7,7 @@ sepia
 oldtime
 redscale
 
-Created By:
-Sam Heutmaker
-Jose Tello
-Joshua Ho
+Created By: <br/>
+Sam Heutmaker <br/>
+Jose Tello <br/>
+Joshua Ho <br/>
