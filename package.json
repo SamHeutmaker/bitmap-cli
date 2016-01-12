@@ -28,5 +28,9 @@
   "directories": {
     "example": "examples"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-watch": "^4.3.5"
+  }
 }
