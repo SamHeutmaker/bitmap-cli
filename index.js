@@ -16,12 +16,12 @@ const bit = require('bitmap-helpers');
         transformation = result.transformation,            // Transformation to perform
            destination = result.file_destination;          // Destination of transformed bitmap
     // Log bitmap meta data
-    bit.readBitMapHeader(orginalBitmap);
+    bit.readBitMapHeader(originalBitmap);
     // New File
     var newFile = bit.createNewFile(originalBitmap, transformation);
     // File Options
     var fileOptions = {
-      fileToCreate: destination + '.bmp'
+      fileToCreate: destination + transformation + '.bmp'
     };
     // Write new file
     bit.writeFile(newFile, fileOptions);
